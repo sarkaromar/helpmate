@@ -1,4 +1,4 @@
-# Lost and Found
+# HelpMate Desing
 
 ### Feature
 * Comming Soon
@@ -33,11 +33,11 @@ Clone with HTTPS
 Use Git or checkout with SVN using the web URL.
 
 ```sh
-https://github.com/sarkaromar/lostnfound.git
+https://github.com/sarkaromar/helpmate.git
 ```
 
 ```sh
-cd lostnfound/
+cd helpmate/
 $ npm install
 ```
 
