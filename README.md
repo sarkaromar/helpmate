@@ -16,12 +16,12 @@
 ### How to install
 ---
 Pre install
-Check for Node and npm
+Node and npm
 
 Make sure that you've installed Node and npm before attempting to install gulp.
 ```sh
-$ node --version
-$ npm --version
+$ node -v
+$ npm -v
 ```
 or check the url if you not understand  
 ```sh
