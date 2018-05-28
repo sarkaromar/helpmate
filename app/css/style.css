@@ -308,6 +308,12 @@ header .home-login-sec {
 
 .about {
   padding: 25px 0; }
+  .about .about-img {
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    width: 150px;
+    margin: 15px; }
 
 .login {
   padding: 100px 0; }

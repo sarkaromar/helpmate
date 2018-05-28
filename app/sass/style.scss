@@ -238,7 +238,7 @@ header{
 			// animation-name: moveleft;
 			// animation-duration: 1s;
 			// animation-timing-function: ease-out;
-			
+
 			animation: moveleft 1s ease-out;
 
 			@media #{$max_phones}{
@@ -350,6 +350,12 @@ header{
 }
 .about{
 	padding: 25px 0;
+	.about-img{
+		float: left;
+		shape-outside: circle(50% at 50% 50%);
+		width: 150px;
+		margin: 15px;
+	}
 }
 .login{
 	padding: 100px 0;
