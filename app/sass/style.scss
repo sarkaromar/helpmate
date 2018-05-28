@@ -27,13 +27,28 @@
 
 // animate.css mixin
 	@mixin add($duration, $delay) {
-	animation-duration: $duration;
-	animation-delay: $delay;
+		animation-duration: $duration;
+		animation-delay: $delay;
 	}
 
 	@for $i from 1 through 5 {
-	.add-#{$i}s { @include add($i/2 + 0s, $i/2 + 0s); }
+		.add-#{$i}s { @include add($i/2 + 0s, $i/2 + 0s); }
 	}
+// animation
+
+@keyframes moveleft{
+	0% {
+		opacity: 0;
+		transform: translate(-100px);
+	}
+	80% {
+		transform: translate(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
 
 // custome style
 
@@ -168,14 +183,17 @@ header{
 	
 }
 .page-banner{
-	background: url(../images/banner1.jpg) center no-repeat;
-    height: 150px;
+	background-image: url(../images/banner1.jpg);
+	// clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+	background-position: center;
 	background-size: cover;
+    height: 150px;
 	display: grid;
 	place-items: center;
 	p.caption {
 		font-size: 22px;
 		font-weight: 100;
+		// text-align: center;
 		margin: 0px;
 		padding: 0;
 		color: $light;
@@ -185,15 +203,30 @@ header{
 	}
 }
 .banner{
-	background: url(../images/banner1.jpg) center no-repeat;
-    height: 500px;
+	background-image: linear-gradient(to right bottom,rgba(23, 162, 184, 0.5),rgba(3, 169, 244, 0.5)),url(../images/banner1.jpg);
+	background-position: center;
 	background-size: cover;
-	display: grid;
-	place-items: center;
+	height: 70vh;
+	// clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 50% 100%, 0 65vh);
+	// display: grid;
+	// place-items: center;
 	text-align: center;
 	.search-opt{
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		color: #fff;
-		padding-bottom: 70px;
+		@media #{$max_phones}{
+			padding-top: 25px;
+			padding-bottom: 0px;
+			position: relative;
+			top: 0%;
+			left: 0%;
+			transform: translate(0%, 0%);
+		}
+		padding-bottom: 50px;
 		#service{
 			&:focus{
 				box-shadow: none;
@@ -202,13 +235,18 @@ header{
 		h1.panel-heading {
 			font-weight: 900;
 			font-size: 42px;
-				
+			// animation-name: moveleft;
+			// animation-duration: 1s;
+			// animation-timing-function: ease-out;
+			
+			animation: moveleft 1s ease-out;
+
 			@media #{$max_phones}{
 				font-size: 24px;
 			}
 		}
 		p.caption {
-			font-size: 22px;
+			font-size: 20px;
 			font-weight: 100;
 			@media #{$max_phones}{
 				font-size: 14px;
@@ -412,7 +450,7 @@ header{
 		li {
 			width: 196px;
 			height: 175px;
-			background-color: #fafafa;
+			background-color: #f1f1f1;
 			display: inline-block;
 			border: 1px #f9f9f9 solid;
 			margin-right: 20px;
@@ -440,9 +478,15 @@ header{
 }
 
 #trust-security{
-	background-color:$primary;
+	// background-color:$primary;
+	background-image: linear-gradient(to right bottom, $primary, $secondary);
+	clip-path: polygon(50% 5%,100% 0,100% 100%,50% 100%,0 100%,0 0);
 	color:#FFF;
 	padding: 50px 0;
+	// transform: skewY(-3deg);
+	// & > * {
+	// 	transform: skewY( 3deg)
+	// }
 	.panel-heading:before{
 		background:#FFFFFF;
 	}
@@ -512,7 +556,7 @@ header{
 			border-radius:50%;
 			padding-top:6px;
 			background: $secondary;
-			background:linear-gradient(to right, $primary, $secondary);
+			background:linear-gradient(to right bottom, $primary, $secondary);
 		}
 	}
 

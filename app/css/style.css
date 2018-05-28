@@ -28,6 +28,32 @@
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s; }
 
+@-webkit-keyframes moveleft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100px);
+    transform: translate(-100px); }
+  80% {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0); } }
+
+@keyframes moveleft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-100px);
+    transform: translate(-100px); }
+  80% {
+    -webkit-transform: translate(20px);
+    transform: translate(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0); } }
+
 .overly {
   position: fixed;
   left: 0;
@@ -139,10 +165,11 @@ header .home-login-sec {
       color: #111111; }
 
 .page-banner {
-  background: url(../images/banner1.jpg) center no-repeat;
-  height: 150px;
+  background-image: url(../images/banner1.jpg);
+  background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
+  height: 150px;
   display: grid;
   place-items: center; }
   .page-banner p.caption {
@@ -156,27 +183,48 @@ header .home-login-sec {
         font-size: 14px; } }
 
 .banner {
-  background: url(../images/banner1.jpg) center no-repeat;
-  height: 500px;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(23, 162, 184, 0.5)), to(rgba(3, 169, 244, 0.5))), url(../images/banner1.jpg);
+  background-image: -webkit-linear-gradient(left top, rgba(23, 162, 184, 0.5), rgba(3, 169, 244, 0.5)), url(../images/banner1.jpg);
+  background-image: linear-gradient(to right bottom, rgba(23, 162, 184, 0.5), rgba(3, 169, 244, 0.5)), url(../images/banner1.jpg);
+  background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
-  display: grid;
-  place-items: center;
+  height: 70vh;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 50% 100%, 0 65vh);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 65vh, 50% 100%, 0 65vh);
   text-align: center; }
   .banner .search-opt {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     color: #fff;
-    padding-bottom: 70px; }
+    padding-bottom: 50px; }
+    @media (max-width: 767px) {
+      .banner .search-opt {
+        padding-top: 25px;
+        padding-bottom: 0px;
+        position: relative;
+        top: 0%;
+        left: 0%;
+        -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        transform: translate(0%, 0%); } }
     .banner .search-opt #service:focus {
       -webkit-box-shadow: none;
       box-shadow: none; }
     .banner .search-opt h1.panel-heading {
       font-weight: 900;
-      font-size: 42px; }
+      font-size: 42px;
+      -webkit-animation: moveleft 1s ease-out;
+      animation: moveleft 1s ease-out; }
       @media (max-width: 767px) {
         .banner .search-opt h1.panel-heading {
           font-size: 24px; } }
     .banner .search-opt p.caption {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 100; }
       @media (max-width: 767px) {
         .banner .search-opt p.caption {
@@ -348,7 +396,7 @@ header .home-login-sec {
     .services .services-list li {
       width: 196px;
       height: 175px;
-      background-color: #fafafa;
+      background-color: #f1f1f1;
       display: inline-block;
       border: 1px #f9f9f9 solid;
       margin-right: 20px;
@@ -369,7 +417,11 @@ header .home-login-sec {
         margin-bottom: 25px; }
 
 #trust-security {
-  background-color: #17a2b8;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#17a2b8), to(#03A9F4));
+  background-image: -webkit-linear-gradient(left top, #17a2b8, #03A9F4);
+  background-image: linear-gradient(to right bottom, #17a2b8, #03A9F4);
+  -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 5%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   color: #FFF;
   padding: 50px 0; }
   #trust-security .panel-heading:before {
@@ -427,9 +479,9 @@ header .home-login-sec {
     border-radius: 50%;
     padding-top: 6px;
     background: #03A9F4;
-    background: -webkit-gradient(linear, left top, right top, from(#17a2b8), to(#03A9F4));
-    background: -webkit-linear-gradient(left, #17a2b8, #03A9F4);
-    background: linear-gradient(to right, #17a2b8, #03A9F4); }
+    background: -webkit-gradient(linear, left top, right bottom, from(#17a2b8), to(#03A9F4));
+    background: -webkit-linear-gradient(left top, #17a2b8, #03A9F4);
+    background: linear-gradient(to right bottom, #17a2b8, #03A9F4); }
 
 #features {
   color: #FFF;
