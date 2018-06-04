@@ -81,14 +81,16 @@ var sass          = require('gulp-sass'),
 
     // gulp build task
     gulp.task('build', function() {
-      // bootstrap
-      gulp.src('node_modules/bootstrap/dist/**/*.min.css')
+      // // bootstrap
+      // gulp.src('node_modules/bootstrap/dist/**/*.min.css')
+      // .pipe(gulp.dest('dist/vendors'));
+      // gulp.src('node_modules/bootstrap/dist/**/*.min.js')
+      // .pipe(gulp.dest('dist/vendors'));
+      // //jquery
+      // gulp.src('node_modules/jquery/dist/*.min.js')
+      // .pipe(gulp.dest('dist/vendors/jquery'));
+      gulp.src('app/vendors/**')
       .pipe(gulp.dest('dist/vendors'));
-      gulp.src('node_modules/bootstrap/dist/**/*.min.js')
-      .pipe(gulp.dest('dist/vendors'));
-      //jquery
-      gulp.src('node_modules/jquery/dist/*.min.js')
-      .pipe(gulp.dest('dist/vendors/jquery'));
       //custom js
       gulp.src('app/js/*.js')
       .pipe(gulp.dest('dist/js'));
