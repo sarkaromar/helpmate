@@ -3,9 +3,11 @@
 	$primary:#17a2b8;
 	$secondary: #03A9F4;
 	$light: #ffffff;
+	$light-x: #eeeeee;
 	$dark: #111111;
 	$gray: #333333;
 	$light-gray:#cccccc; 
+	$gray-x:#999; 
 
 // Responsive Brackpoint 
 	$phones: "(max-width: 575px)";
@@ -353,7 +355,7 @@ header{
 			// animation-duration: 1s;
 			// animation-timing-function: ease-out;
 
-			animation: moveleft 1s ease-out;
+			// animation: moveleft 1s ease-out;
 
 			@media #{$max_phones}{
 				font-size: 24px;
@@ -387,9 +389,10 @@ header{
 				border-radius: 0;
 				border: 0;
 				border-right: 1px solid #eee;
-				margin-right: 10px;
-				color: #6c757d;
-				font-size: 20px;
+				// margin-right: 10px;
+				color: $gray-x;
+				font-size: 18px;
+				font-weight: 600;
 				width: 50%;
 				
 				@media #{$max_phones}{
@@ -475,18 +478,18 @@ header{
 	padding: 100px 0;
 }
 .page-body{
-	background: #f6f6f6;
+	background: $light-x;
 	.contact-form{
 		padding-bottom: 35px;
 	}
 	.filter-sec{
 		background: $light;
-		padding: 10px;
+		padding: 15px;
 	}
 	.vendor{
 		background: $light;
 		padding: 10px;
-		border-bottom: 1px solid #f6f6f6;
+		border-bottom: 1px solid $light-x;
 		.title{
 			font-size: 22px;
 			color: $gray;
@@ -497,6 +500,7 @@ header{
 		.exp{
 			padding: 0;
 			margin: 0;
+			font-size: 14px;
 		}
 		.details-btn{
 			padding-top: 35px;

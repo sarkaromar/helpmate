@@ -10,7 +10,8 @@
     "gulp-html-minifier": "^0.1.8",
     "gulp-watch": "^4.3.11",
     "node-sass": "^4.9.0",
-    "popper.js": "^1.12.6"
+    "popper.js": "^1.12.6",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "browser-sync": "^2.18.13",

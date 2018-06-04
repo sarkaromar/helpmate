@@ -38,6 +38,9 @@ var sass          = require('gulp-sass'),
       //animate.css
       gulp.src('node_modules/animate.css/*.min.css')
       .pipe(gulp.dest('app/vendors/css'));
+      //wow.js
+      gulp.src('node_modules/wow.js/dist/*.min.js')
+      .pipe(gulp.dest('app/vendors/js'));
 
     });
 
@@ -100,7 +103,7 @@ var sass          = require('gulp-sass'),
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('dist'))
       //images
-      gulp.src('app/images/*')
+      gulp.src('app/images/**')
       .pipe(imagemin())
       .pipe(gulp.dest('dist/images'))
     });
