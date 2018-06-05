@@ -96,6 +96,7 @@ header{
 	}
 	nav{
 		float: right;
+
 		@media #{$max_phones}{
 			display: none;
 			position: fixed;
@@ -115,6 +116,11 @@ header{
 					a{
 						width: 100%;
 						padding: 10px 15px !important;
+					}
+					i.fas{
+						display: inline-block !important;
+						color: $primary;
+						padding-right: 10px;
 					}
 				}
 			}
@@ -138,6 +144,9 @@ header{
 						text-decoration: none;
 						color: $primary;
 					}
+				}
+				i.fas{
+					display: none;
 				}
 			}
 		}
@@ -600,6 +609,10 @@ header{
 	// & > * {
 	// 	transform: skewY( 3deg)
 	// }
+	@media #{$max_phones}{
+		background-image: linear-gradient(to right bottom, $primary, $secondary);
+		clip-path: polygon(50% 2%,100% 0,100% 100%,50% 100%,0 100%,0 0);
+	}
 	.panel-heading:before{
 		background:#FFFFFF;
 	}

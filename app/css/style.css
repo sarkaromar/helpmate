@@ -108,7 +108,11 @@ header nav {
         border-bottom: 1px solid #cccccc; }
         header nav ul li a {
           width: 100%;
-          padding: 10px 15px !important; } }
+          padding: 10px 15px !important; }
+        header nav ul li i.fas {
+          display: inline-block !important;
+          color: #17a2b8;
+          padding-right: 10px; } }
   header nav ul {
     margin: 0;
     padding: 0; }
@@ -127,6 +131,8 @@ header nav {
         header nav ul li a:hover {
           text-decoration: none;
           color: #17a2b8; }
+      header nav ul li i.fas {
+        display: none; }
 
 header .btn-reg {
   margin-top: -5px;
@@ -513,6 +519,13 @@ header .home-login-sec {
   clip-path: polygon(50% 5%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
   color: #FFF;
   padding: 50px 0; }
+  @media (max-width: 767px) {
+    #trust-security {
+      background-image: -webkit-gradient(linear, left top, right bottom, from(#17a2b8), to(#03A9F4));
+      background-image: -webkit-linear-gradient(left top, #17a2b8, #03A9F4);
+      background-image: linear-gradient(to right bottom, #17a2b8, #03A9F4);
+      -webkit-clip-path: polygon(50% 2%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0);
+      clip-path: polygon(50% 2%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0); } }
   #trust-security .panel-heading:before {
     background: #FFFFFF; }
   #trust-security .box_content a.read-more {
