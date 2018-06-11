@@ -315,6 +315,11 @@ header{
     height: 150px;
 	display: grid;
 	place-items: center;
+	
+	@media #{$max_phones}{
+		height: 80px;
+	}
+
 	p.caption {
 		font-size: 22px;
 		font-weight: 100;
@@ -854,14 +859,14 @@ footer{
 .single-blog-post .readmore{border:1px solid #24e4eb;color:#45ade7;font-size:15px;font-weight:600;margin:0;padding:9px 20px;text-transform:uppercase;}
 
 .sidebar-wrapper .single-sidebar .search-form{border-bottom:1px solid #aaa;}
-.sidebar-wrapper .single-sidebar .search-form input[type="text"]{border:medium none;box-shadow:none;width:85%;font-size:15px;color:#aaaaaa;}
+.sidebar-wrapper .single-sidebar .search-form input[type="text"]{border:medium none;box-shadow:none;width:85%;font-size:15px;color:#aaaaaa;padding: 5px;}
 .sidebar-wrapper .single-sidebar .search-form button{background:none;color:#fff;height:50px;padding:12px 0;text-align:center;border:medium none;width:13%;}
 .sidebar-wrapper .single-sidebar .search-form button i{font-size:19px;color:#aaaaaa;}
 .sidebar-wrapper .single-sidebar .sec-title{margin-top:22px;overflow:hidden;padding-bottom:10px;}
 .sidebar-wrapper .single-sidebar .sec-title h3{color:#333333;font-size:19px;font-weight:600;margin:0;}
 .single-sidebar .categories li{border-bottom:1px solid #dddddd;font-size:14px;line-height:42px;list-style:outside none none;padding-left:25px;}
 .single-sidebar .categories li a{color:#333333;}
-.single-sidebar .categories li::before{color:#45ade7;content:">";left:15px;position:absolute;font-size:22px;}
+.single-sidebar .categories li::before{color:#45ade7;content:"♦";left:15px;position:absolute;font-size:22px;}
 .single-sidebar .categories{padding:0;}
 .single-sidebar .latest-post{padding:0px;}
 .single-sidebar .latest-post li{list-style:outside none none;margin-bottom:0;padding-bottom:5px;padding-left:70px;position:relative;}

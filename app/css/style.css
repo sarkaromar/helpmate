@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .add-1s {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
@@ -273,6 +274,9 @@ header .home-login-sec {
   height: 150px;
   display: grid;
   place-items: center; }
+  @media (max-width: 767px) {
+    .page-banner {
+      height: 80px; } }
   .page-banner p.caption {
     font-size: 22px;
     font-weight: 100;
@@ -890,7 +894,8 @@ footer {
   box-shadow: none;
   width: 85%;
   font-size: 15px;
-  color: #aaaaaa; }
+  color: #aaaaaa;
+  padding: 5px; }
 
 .sidebar-wrapper .single-sidebar .search-form button {
   background: none;
@@ -928,7 +933,7 @@ footer {
 
 .single-sidebar .categories li::before {
   color: #45ade7;
-  content: ">";
+  content: "♦";
   left: 15px;
   position: absolute;
   font-size: 22px; }
