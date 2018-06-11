@@ -102,7 +102,7 @@ var sass          = require('gulp-sass'),
       .pipe(gulp.dest('dist/css'));
       //html
       gulp.src('app/*.html')
-      .pipe(htmlmin({collapseWhitespace: true}))
+      //.pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('dist'))
       //images
       gulp.src('app/images/**')
