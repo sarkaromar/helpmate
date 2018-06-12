@@ -89,6 +89,7 @@ var sass          = require('gulp-sass'),
       // //jquery
       // gulp.src('node_modules/jquery/dist/*.min.js')
       // .pipe(gulp.dest('dist/vendors/jquery'));
+       
       gulp.src('app/vendors/**')
       .pipe(gulp.dest('dist/vendors'));
       //custom js
@@ -104,7 +105,7 @@ var sass          = require('gulp-sass'),
       gulp.src('app/*.html')
       //.pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('dist'))
-      //images
+      //images 
       gulp.src('app/images/**')
       .pipe(imagemin())
       .pipe(gulp.dest('dist/images'))
